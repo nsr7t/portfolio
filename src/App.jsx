@@ -3,10 +3,10 @@ import Hero from "./sections/Hero";
 
 function App() {
   return (
-    <body className={"bg-gray-900 text-white antialiased font-inter"}>
+    <div>
       <Header />
       <Hero />
-    </body>
+    </div>
   );
 }
 
