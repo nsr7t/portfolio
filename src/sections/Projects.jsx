@@ -105,7 +105,7 @@ function Projects() {
                                     <img
                                         src={project.image}
                                         alt={project.title}
-                                        className="mt-8 -mb-4 md:-mb-0 lg:absolute lg:mt-0 lg:max-w-none"
+                                        className="mt-8 -mb-4 md:-mb-0 lg:absolute lg:mt-0 lg:h-full lg:max-w-none"
                                     />
                                 </div>
                             </div>
