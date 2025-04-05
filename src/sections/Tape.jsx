@@ -1,5 +1,5 @@
 function Tape() {
-  return <div></div>;
+    return <div></div>
 }
 
-export default Tape;
+export default Tape

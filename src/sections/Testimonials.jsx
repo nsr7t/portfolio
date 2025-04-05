@@ -1,5 +1,5 @@
 function Testimonials() {
-  return <div></div>;
+    return <div></div>
 }
 
-export default Testimonials;
+export default Testimonials
