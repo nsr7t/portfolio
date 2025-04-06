@@ -1,4 +1,4 @@
-import StarIcon from "../components/SparkleIcon"
+import StarIcon from "../components/Icons/SparkleIcon"
 
 const words = [
     "Performant",

@@ -3,8 +3,8 @@ import ArrowDown from "../assets/icons/arrow-down.svg"
 4
 import grainImage from "../assets/images/grain.jpg"
 import HeroOrbitAnimation from "../components/HeroOrbitAnimation"
-import StarIcon from "../components/StarIcon"
-import SparkleIcon from "../components/SparkleIcon"
+import StarIcon from "../components/Icons/StarIcon"
+import SparkleIcon from "../components/Icons/SparkleIcon"
 
 function Hero() {
     return (

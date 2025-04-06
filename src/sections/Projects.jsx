@@ -1,8 +1,8 @@
 import darkSassImage from "../assets/images/dark-saas-landing-page.png"
 import lightSassImage from "../assets/images/light-saas-landing-page.png"
 import aiStartupImage from "../assets/images/ai-startup-landing-page.png"
-import CheckIcon from "../components/CheckIcon"
-import ArrowUpRight from "../components/ArrowUpRight"
+import CheckIcon from "../components/Icons/CheckIcon"
+import ArrowUpRight from "../components/Icons/ArrowUpRight"
 import SectionHeader from "../components/SectionHeader"
 import Card from "../components/Card"
 
