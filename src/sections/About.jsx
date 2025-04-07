@@ -42,7 +42,7 @@ function About() {
                 />
                 <div className="mt-20 flex flex-col gap-8">
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-                        <Card className="col-span-1 h-[320px] md:col-span-1">
+                        <Card className="h-[320px] md:col-span-2 lg:col-span-1">
                             <CardHeader
                                 title=" My Reads"
                                 description="Explore the books shaping my perspective"
@@ -51,7 +51,7 @@ function About() {
                                 <img src={bookImage} alt="Book Cover" />
                             </div>
                         </Card>
-                        <Card className="col-span-2 h-[320px] md:col-span-2">
+                        <Card className="h-[320px] md:col-span-3 lg:col-span-2">
                             <CardHeader
                                 title="My Toolbox"
                                 description="Explore the technologies and tools I use to
@@ -67,7 +67,7 @@ function About() {
                         </Card>
                     </div>
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-                        <Card className="col-span-3 flex h-[320px] flex-col p-0 lg:col-span-2">
+                        <Card className="flex h-[320px] flex-col p-0 md:col-span-3 lg:col-span-2">
                             <CardHeader
                                 title="Beyond the code"
                                 description="Explore my interests and hobbies beyond the
@@ -93,7 +93,7 @@ function About() {
                                 ))}
                             </div>
                         </Card>
-                        <Card className="relative col-span-2 h-[320px] p-0 lg:col-span-1">
+                        <Card className="relative h-[320px] p-0 md:col-span-2 lg:col-span-1">
                             <img
                                 src={mapImage}
                                 alt="map image"
