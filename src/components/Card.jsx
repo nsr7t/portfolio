@@ -5,7 +5,7 @@ function Card({ className, children }) {
     return (
         <div
             className={twMerge(
-                "relative overflow-hidden rounded-3xl bg-gray-800 p-6 outline-2 -outline-offset-2 outline-white/20 after:pointer-events-none",
+                "relative overflow-hidden rounded-3xl bg-gray-800 outline-2 -outline-offset-2 outline-white/20 after:pointer-events-none",
                 className,
             )}
         >
