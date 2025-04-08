@@ -12,6 +12,8 @@ import mapImage from "../assets/images/map.png"
 import CardHeader from "../components/CardHeader"
 import smileEmoji from "../assets/images/memoji-smile.png"
 import ToolboxItems from "../components/ToolboxItems"
+import { motion } from "framer-motion"
+import { useRef } from "react"
 
 const toolboxItems = [
     { title: "JavaScript", icon: <SquareJs className="size-10" /> },
@@ -32,6 +34,7 @@ const hobbies = [
 ]
 
 function About() {
+    const contrainetRef = useRef(null)
     return (
         <div className="py-20 lg:py-28">
             <div className="container">
@@ -58,11 +61,14 @@ function About() {
                             craft exceptional digital experiences."
                                 className=""
                             />
-                            <ToolboxItems items={toolboxItems} className="" />
+                            <ToolboxItems
+                                items={toolboxItems}
+                                itemsWrapperClassName="animate-move-left [animation-duration:30s]"
+                            />
                             <ToolboxItems
                                 items={toolboxItems}
                                 className="mt-6"
-                                itemsWrapperClassName="-translate-x-1/2"
+                                itemsWrapperClassName="-translate-x-1/2 animate-move-right [animation-duration:15s] px-8 "
                             />
                         </Card>
                     </div>
@@ -75,21 +81,26 @@ function About() {
                                 className="px-6 py-6"
                             />
 
-                            <div className="relative flex-1">
+                            <div
+                                className="relative flex-1"
+                                ref={contrainetRef}
+                            >
                                 {hobbies.map((hobby) => (
-                                    <div
+                                    <motion.div
                                         key={hobby.title}
                                         className="absolute inline-flex items-center gap-2 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 px-6 py-1.5"
                                         style={{
                                             left: hobby.left,
                                             top: hobby.top,
                                         }}
+                                        drag
+                                        dragConstraints={contrainetRef}
                                     >
                                         <span className="font-medium text-gray-950">
                                             {hobby.title}
                                         </span>
                                         <span>{hobby.emoji}</span>
-                                    </div>
+                                    </motion.div>
                                 ))}
                             </div>
                         </Card>
@@ -99,8 +110,10 @@ function About() {
                                 alt="map image"
                                 className="h-full w-full object-cover object-left-top"
                             />
-                            <div className="to absolute top-1/2 left-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-400 bg-gradient-to-r from-emerald-300 after:absolute after:inset-0 after:rounded-full after:outline-2 after:-outline-offset-2 after:outline-gray-950/30 after:content-['']">
-                                {" "}
+                            <div className="absolute top-1/2 left-1/2 size-20 -translate-x-1/2 -translate-y-1/2 rounded-full bg-sky-400 after:absolute after:inset-0 after:rounded-full after:outline-2 after:-outline-offset-2 after:outline-gray-950/30 after:content-['']">
+                                <div className="absolute inset-0 -z-20 animate-ping rounded-full bg-gradient-to-r from-emerald-300 to-sky-400 [animation-duration:2s]"></div>
+                                <div className="absolute inset-0 -z-10 rounded-full bg-gradient-to-r from-emerald-300 to-sky-400"></div>
+
                                 <img
                                     src={smileEmoji}
                                     alt="smiling emoji"

@@ -1,3 +1,4 @@
+import { Fragment } from "react"
 import { twMerge } from "tailwind-merge"
 
 function ToolboxItems({ items, className, itemsWrapperClassName }) {
@@ -9,14 +10,20 @@ function ToolboxItems({ items, className, itemsWrapperClassName }) {
                     itemsWrapperClassName,
                 )}
             >
-                {items.map((item) => (
-                    <div
-                        key={item.title}
-                        className="inline-flex items-center gap-4 rounded-lg px-3 py-2 outline-2 outline-white/10"
-                    >
-                        <span>{item.icon}</span>
-                        <span className="font-semibold">{item.title}</span>
-                    </div>
+                {[...new Array(2)].fill(0).map((_, id) => (
+                    <Fragment key={id}>
+                        {items.map((item) => (
+                            <div
+                                key={item.title}
+                                className="inline-flex items-center gap-4 rounded-lg px-3 py-2 outline-2 outline-white/10"
+                            >
+                                <span>{item.icon}</span>
+                                <span className="font-semibold">
+                                    {item.title}
+                                </span>
+                            </div>
+                        ))}
+                    </Fragment>
                 ))}
             </div>
         </div>
