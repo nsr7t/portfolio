@@ -5,6 +5,7 @@ import avatar4 from "../assets/images/memoji-avatar-4.png"
 import avatar5 from "../assets/images/memoji-avatar-5.png"
 import SectionHeader from "../components/SectionHeader"
 import Card from "../components/Card"
+import { Fragment } from "react"
 
 // Dummy text
 const testimonials = [
@@ -51,35 +52,43 @@ function Testimonials() {
                         "Don't just take my words for it. See what my clients have to say about my work. "
                     }
                 />
-                <div className="mask mt-16 flex overflow-x-clip lg:mt-24">
-                    <div className="flex flex-none gap-8">
-                        {testimonials.map((testimonial) => (
-                            <Card
-                                key={testimonial.name}
-                                className={"max-w-xs p-6 md:max-w-md md:p-8"}
-                            >
-                                <div className="flex items-center gap-4">
-                                    <div className="flex size-14 flex-shrink-0 items-center justify-center rounded-full bg-gray-700">
-                                        <img
-                                            src={testimonial.avatar}
-                                            alt={testimonial.name}
-                                            className="max-h-full"
-                                        />
-                                    </div>
-                                    <div>
-                                        <div className="font-semibold">
-                                            {testimonial.name}
-                                        </div>
-                                        <div className="text-sm text-white/40">
-                                            {testimonial.position}
-                                        </div>
-                                    </div>
-                                </div>
-                                <p className="mt-4 text-sm md:mt-6 md:text-base">
-                                    {testimonial.text}
-                                </p>
-                            </Card>
-                        ))}
+                <div className="mask -my-4 mt-12 flex overflow-x-clip py-4 lg:mt-20">
+                    <div className="animate-move-left flex flex-none gap-8 [animation-duration:90s] hover:[animation-play-state:paused]">
+                        {[
+                            ...new Array(2).fill(0).map((_, index) => (
+                                <Fragment key={index}>
+                                    {testimonials.map((testimonial) => (
+                                        <Card
+                                            key={testimonial.name}
+                                            className={
+                                                "max-w-xs p-6 transition duration-300 hover:-rotate-3 md:max-w-md md:p-8"
+                                            }
+                                        >
+                                            <div className="flex items-center gap-4">
+                                                <div className="flex size-14 flex-shrink-0 items-center justify-center rounded-full bg-gray-700">
+                                                    <img
+                                                        src={testimonial.avatar}
+                                                        alt={testimonial.name}
+                                                        className="max-h-full"
+                                                    />
+                                                </div>
+                                                <div>
+                                                    <div className="font-semibold">
+                                                        {testimonial.name}
+                                                    </div>
+                                                    <div className="text-sm text-white/40">
+                                                        {testimonial.position}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <p className="mt-4 text-sm md:mt-6 md:text-base">
+                                                {testimonial.text}
+                                            </p>
+                                        </Card>
+                                    ))}
+                                </Fragment>
+                            )),
+                        ]}
                     </div>
                 </div>
             </div>
