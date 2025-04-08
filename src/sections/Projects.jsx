@@ -57,10 +57,11 @@ function Projects() {
                 />
 
                 <div className="mt-10 flex flex-col gap-20 md:mt-20">
-                    {portfolioProjects.map((project) => (
+                    {portfolioProjects.map((project, index) => (
                         <Card
                             key={project.title}
-                            className="px-8 pt-8 pb-0 md:px-10 md:pt-12 lg:px-20 lg:pt-16"
+                            className="sticky px-8 pt-8 pb-0 md:px-10 md:pt-12 lg:px-20 lg:pt-16"
+                            style={{ top: `calc(64px + ${index * 40}px )` }}
                         >
                             <div className="gap-16 lg:grid lg:grid-cols-2">
                                 <div className="lg:pb-16">
