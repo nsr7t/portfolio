@@ -16,6 +16,17 @@
     --breakpoint-lg: 1200px;
     --font-inter: Inter, "sans-serif";
     --font-calistoga: Calistoga, "sans-serif";
+
+    --animate-ping-large: ping-large 1s ease-in-out infinite;
+
+    @keyframes ping-large {
+
+        75%,
+        100% {
+            transform: scale(3);
+            opacity: 0;
+        }
+    }
 }
 
 @layer base {
@@ -33,6 +44,10 @@
 
     .footer-mask {
         mask-image: radial-gradient(50% 50% at bottom center, black, transparent);
+    }
+
+    .a-d {
+        animation-duration: 10s;
     }
 
 }
