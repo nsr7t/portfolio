@@ -8,7 +8,7 @@ function Contact() {
             id="contact-us-section"
         >
             <div className="container">
-                <div className="to relative z-0 overflow-hidden rounded-3xl bg-sky-400 bg-gradient-to-r from-emerald-300 px-10 py-8 text-center text-gray-900 md:text-left">
+                <div className="to relative z-40 overflow-hidden rounded-3xl bg-sky-400 bg-gradient-to-r from-emerald-300 px-10 py-8 text-center text-gray-900 md:text-left">
                     <div
                         className="absolute inset-0 -z-10 opacity-5"
                         style={{ backgroundImage: `url(${grainImage})` }}
