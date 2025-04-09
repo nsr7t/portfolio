@@ -47,7 +47,7 @@ const portfolioProjects = [
 
 function Projects() {
     return (
-        <section className="pb-16 lg:py-24">
+        <section className="pb-16 lg:py-24" id="projects">
             <div className="container">
                 <SectionHeader
                     eyebrow="Real-world Results"
@@ -56,7 +56,10 @@ function Projects() {
                     experiences."
                 />
 
-                <div className="mt-10 flex flex-col gap-20 md:mt-20">
+                <div
+                    className="mt-10 flex flex-col gap-20 md:mt-20"
+                    id="feature-projects"
+                >
                     {portfolioProjects.map((project, index) => (
                         <Card
                             key={project.title}

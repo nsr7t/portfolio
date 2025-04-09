@@ -1,6 +1,5 @@
 import memojiImage from "../assets/images/memoji-computer.png"
 import ArrowDown from "../assets/icons/arrow-down.svg"
-4
 import grainImage from "../assets/images/grain.jpg"
 import HeroOrbitAnimation from "../components/HeroOrbitAnimation"
 import StarIcon from "../components/Icons/StarIcon"
@@ -8,10 +7,13 @@ import SparkleIcon from "../components/Icons/SparkleIcon"
 
 function Hero() {
     return (
-        <div className="relative z-1 overflow-x-clip py-32 md:py-48 lg:py-60">
-            <div className="absolute inset-0 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
+        <section
+            className="relative overflow-x-clip py-32 md:py-48 lg:py-60"
+            id="home"
+        >
+            <div className="absolute inset-0 -z-1 [mask-image:linear-gradient(to_bottom,transparent,black_10%,black_70%,transparent)]">
                 <div
-                    className="absolute inset-0 -z-1 opacity-5"
+                    className="absolute inset-0 opacity-5"
                     style={{ backgroundImage: `url(${grainImage})` }}
                 ></div>
                 <div className="hero-ring size-[620px]"></div>
@@ -115,7 +117,7 @@ function Hero() {
                 </HeroOrbitAnimation>
             </div>
 
-            <div className="container">
+            <div className="z-20 container">
                 <div className="flex flex-col items-center">
                     <img
                         src={memojiImage}
@@ -143,7 +145,14 @@ function Hero() {
                 </div>
 
                 <div className="mt-8 flex flex-col items-center justify-center gap-4 md:flex-row">
-                    <button className="inline-flex h-12 items-center gap-2 rounded-xl border border-white/15 px-6">
+                    <button
+                        className="inline-flex h-12 cursor-pointer items-center gap-2 rounded-xl border border-white/15 px-6"
+                        onClick={() =>
+                            document
+                                .getElementById("feature-projects")
+                                .scrollIntoView({ behavior: "smooth" })
+                        }
+                    >
                         <span className="font-semibold">Explore My Work</span>
                         <img
                             src={ArrowDown}
@@ -151,13 +160,21 @@ function Hero() {
                             className="size-4"
                         />
                     </button>
-                    <button className="inline-flex h-12 items-center gap-2 rounded-xl border border-white bg-white px-6 text-gray-900">
+                    <button
+                        onClick={() =>
+                            document
+                                .getElementById("contact-us-section")
+                                .scrollIntoView({ behavior: "smooth" })
+                        }
+                        className="z-20 inline-flex h-12 cursor-pointer items-center gap-2 rounded-xl border border-white bg-white px-6 text-gray-900"
+                        style={{ cursor: "pointer" }}
+                    >
                         <span>👋</span>
                         <span className="font-semibold">Let's Connect</span>
                     </button>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 

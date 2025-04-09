@@ -28,7 +28,6 @@ const hobbies = [
     { title: "Gaming", emoji: "🎮", left: "5%", top: "5%" },
     { title: "Football", emoji: "⚽", left: "50%", top: "5%" },
     { title: "Photography", emoji: "📷", left: "50%", top: "65%" },
-    { title: "Reading", emoji: "📖", left: "10%", top: "35%" },
     { title: "Hiking", emoji: "🥾", left: "60%", top: "35%" },
     { title: "Cooking", emoji: "🍳", left: "5%", top: "65%" },
 ]
@@ -36,7 +35,7 @@ const hobbies = [
 function About() {
     const contrainetRef = useRef(null)
     return (
-        <div className="py-20 lg:py-28">
+        <section className="-z-0 py-20 lg:py-28" id="about-section">
             <div className="container">
                 <SectionHeader
                     eyebrow="About me"
@@ -124,7 +123,7 @@ function About() {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     )
 }
 
