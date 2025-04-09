@@ -26,7 +26,7 @@ function Contact() {
                         </div>
                         <div>
                             <a
-                                href="mailto:nasratullah2006@gmail.com"
+                                href="mailto:nasratulla2006@gmail.com"
                                 className="inline-flex h-12 w-max cursor-pointer items-center gap-2 rounded-xl border border-gray-900 bg-gray-900 px-6 text-white"
                             >
                                 <span className="font-semibold">
